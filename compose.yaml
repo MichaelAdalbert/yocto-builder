@@ -1,0 +1,10 @@
+services:
+  yocto-builder:
+    build: .
+    container_name: yocto-builder
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./yocto:/home/builder/yocto-dir
+    command: /bin/bash
+    user: "builder"
